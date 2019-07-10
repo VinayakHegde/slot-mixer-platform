@@ -1,0 +1,80 @@
+<!-- Side View Controls -->
+<div>
+	<navigation-control start-caption="My Account"
+						home-link="main-menu"
+						home-icon="icon-user">
+
+		<open class="nav-expand">
+			<!-- Back -->
+			<button id="pt-small-back" class="btn-icon" link-back>
+				<span class="font-icon icon-back-arrow"></span>
+			</button>
+
+			<!-- Home -->
+			<button id="pt-small-home" class="btn-icon" link-to="main-menu">
+				<span class="font-icon icon-home"></span>
+			</button>
+
+			<!-- Close -->
+			<button id="pt-small-close" class="btn-icon" link-to
+					tigger-show="nav-closed"
+					tigger-hide="nav-open">
+				<span class="font-icon icon-x"></span>
+			</button>
+		</open>
+	</navigation-control>
+</div>
+
+<!-- Bottom View Content -->
+<div class="bottom-content">
+
+	<!-- Text Display -->
+	<span class="text welcome-msg" display-for="2">Welcome <span>{{customer.name}}</span> to Monte-Carlo</span>
+
+	<!-- Next Point -->
+	<div class="bar-area next-point" display-after="2" link-to="current-session" tigger-show="nav-open" tigger-hide="nav-closed">
+		<progress-bar target="100"
+					  animation="none"
+					  animation-high="slowFlash"
+					  progress=customer.nextPointEarned>
+		</progress-bar>
+
+		<div class="reward-display">
+			<span class="text">My Next Point</span>
+			<span class="font-icon icon-play"></span>
+		</div>
+	</div>
+
+	<!-- Next Reward -->
+	<div class="bar-area next-reward" display-after="2" link-to="my-rewards" tigger-show="nav-open" tigger-hide="nav-closed">
+		<progress-bar target="100"
+					  progress="85"
+					  animation="none"
+					  animation-high="slowFlash">
+		</progress-bar>
+
+		<div class="reward-display">
+			<span class="text">My Next Reward</span>
+			<span class="font-icon icon-star"></span>
+		</div>
+	</div>
+
+</div>
+
+<!-- Service -->
+<button id="pt-small-back" link-to="main-menu" class="btn-icon" tigger-show="service-popup,nav-open" tigger-hide="nav-closed" call-for-assistance display-after="2">
+	<span class="font-icon icon-bell"></span>
+</button>
+
+<!-- Eject -->
+<button class="btn-icon" eject-card display-after="2">
+	<span class="font-icon icon-eject"></span>
+</button>
+
+<!-- Service Request -->
+	<div id="service-popup" style="position:absolute; top:-1020px; left:0; width: 540px; height: 1020px" class="popup-box" tigger-hide="service-popup">
+		<div class="container">
+			<span class="font-icon icon-bell"></span>
+			<span class="text">A host is on their way</span>
+		</div>
+	</div>

@@ -1,0 +1,33 @@
+.popup-box {
+	width: 100%;
+	height: 100%;
+	background: @primary-bg;
+	color: @secondary-bg;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none; // Default to off when you enter the screen the message is displayed on
+
+	.container {
+		display: flex;
+		flex: 1;
+		height: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		margin: 0 40px;
+
+		.font-icon {
+			font-size: 62px;
+			color: @secondary-bg;
+			margin-bottom: 20px;
+		}
+
+		.text {
+			.gotham-md;
+			text-transform: inherit !important;
+			letter-spacing: inherit !important;
+		}
+	}
+}

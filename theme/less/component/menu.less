@@ -1,0 +1,29 @@
+.main-menu, .settings, .languages, .information-menu, .themes {
+    flex-direction: column;
+
+    .menu-items {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: 100%;
+
+        .btn {
+            flex: 1;
+            padding-left: 20px;
+            margin-bottom: 20px;
+            text-align: left;
+
+            .font-icon {
+                margin-right: 10px;
+            }
+
+			span {
+				align-self: center;
+			}
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

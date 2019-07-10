@@ -1,0 +1,104 @@
+// Font
+body {
+	font-family: 'Playfair-Display', sans-serif;
+}
+
+// Attributes
+.atr {
+	line-height: initial;
+	letter-spacing: 0.1em;
+}
+
+// Font Sizes
+@fs-xl: 82px;
+@fs-lg: 42px;
+@fs-md: 32px;
+@fs-rg: 22px;
+@fs-sm: 18px;
+@fs-xs: 16px;
+
+// Font Weights
+@fw-black: 700;
+@fw-bold: 600;
+@fw-medium: 500;
+@fw-regular: 400;
+@fw-light: 300;
+@fw-xlight: 200;
+@fw-thin: 100;
+
+// Text
+.xl-text {
+    font-size: @fs-xl;
+    font-weight: @fw-thin;
+    .atr;
+}
+
+.lg-text {
+	font-size: @fs-lg;
+	font-weight: @fw-thin;
+	.atr;
+}
+
+.md-text {
+    font-size: @fs-md;
+    font-weight: @fw-thin;
+    .atr;
+}
+
+.rg-text {
+    font-size: @fs-rg;
+    font-weight: @fw-thin;
+    .atr;
+}
+
+.sm-text {
+    font-size: @fs-sm;
+    font-weight: @fw-thin;
+    .atr;
+}
+
+.xs-text {
+    font-size: @fs-xs;
+    font-weight: @fw-thin;
+    .atr;
+}
+
+//
+// Gotham
+//
+
+.gotham {
+	text-transform: uppercase;
+	font-family: 'Gotham', sans-serif !important;
+	.atr;
+}
+
+.gotham-xs {
+	.gotham;
+	font-size: @fs-xs;
+	font-weight: @fw-medium;
+}
+
+.gotham-sm {
+	.gotham;
+	font-size: @fs-sm;
+	font-weight: @fw-medium;
+}
+
+.gotham-rg {
+	.gotham;
+	font-size: @fs-rg;
+	font-weight: @fw-regular;
+}
+
+.gotham-md {
+	.gotham;
+	font-size: @fs-md;
+	font-weight: @fw-medium;
+}
+
+.gotham-lg {
+	.gotham;
+	font-size: @fs-lg;
+	font-weight: @fw-medium;
+}

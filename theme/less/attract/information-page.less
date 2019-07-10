@@ -1,0 +1,154 @@
+.hotels, .restaurants-and-bars, .wellness-and-sport, .shows {
+	padding: 0 !important;
+	position: relative;
+	flex-direction: column;
+
+	.date {
+		.gotham-sm;
+		color: @grey2;
+		font-weight: @fw-regular !important;
+		text-transform: inherit !important;
+		margin-bottom: 40px;
+	}
+
+	.promo-content {
+		flex: none;
+		position: relative;
+
+		img {
+			height: 480px;
+			position: relative;
+		}
+
+		.chip {
+			top: 226px !important;
+			bottom: 5px;
+		}
+	}
+
+	.info-area {
+		display: flex;
+		flex-direction: column;
+		background: @white;
+		height: 460px;
+		padding: 40px;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+		.title {
+			text-align: left;
+			color: @black;
+			margin-bottom: 40px;
+			letter-spacing: inherit !important;
+
+			.gold {
+				color: @secondary-bg;
+			}
+		}
+		// Content Name / Title
+		.content-title {
+			display: flex;
+			flex-direction: row;
+			padding-bottom: 20px;
+
+			.name {
+				color: @secondary-bg;
+				display: inline-block;
+				margin-right: 10px;
+				line-height: 23px;
+				.gotham-sm;
+				font-weight: @fw-regular !important;
+				letter-spacing: inherit !important;
+			}
+
+			.stars {
+				flex: 1;
+				color: @secondary-bg;
+				text-align: left;
+
+				.font-icon {
+					margin-left: -5px;
+				}
+
+				img {
+					width: 20px;
+				}
+			}
+		}
+		// Features
+		.features {
+			color: @grey2;
+			.gotham-sm;
+			font-weight: @fw-regular !important;
+			flex: 1;
+		}
+		// Text
+		.text {
+			color: @grey1 !important;
+			.gotham-sm;
+			font-weight: @fw-light !important;
+			text-transform: inherit !important;
+		}
+	}
+
+	// Pager Position
+	.pager {
+		bottom: 560px;
+	}
+}
+
+.restaurants-and-bars, .wellness-and-sport, .shows {
+
+	.promo-content {
+
+		img {
+			height: 280px;
+		}
+	}
+
+	.info-area {
+		height: 660px;
+	}
+
+	.content-title {
+		.name {
+			color: @dark-grey !important;
+			font-size: @fs-rg !important;
+			text-transform: inherit !important;
+
+			.michelin-star {
+				height: 20px;
+				vertical-align: middle;
+				width: auto !important;
+			}
+		}
+	}
+
+	.features {
+		flex: none !important;
+		margin-bottom: 40px;
+	}
+
+	// Pager Position
+	.pager {
+		bottom: 760px;
+	}
+}
+
+// Restaurants & Bars
+.restaurants-and-bars {
+	.text {
+		flex: 1 !important;
+	}
+}
+
+// Wellnes & Sport
+.wellness-and-sport, .shows {
+	.text {
+		margin-bottom: 20px;
+	}
+
+	.bullet-points {
+		flex: 1;
+		margin: 0;
+	}
+}

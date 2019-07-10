@@ -1,0 +1,109 @@
+keypad-controls {
+    .btn-icon {
+        .btn;
+    }
+}
+
+// Number Button
+.number-button {
+    height: 120px;
+    margin: 0 10px 10px 0;
+    .gotham-md;
+	font-weight: @fw-medium !important;
+    .btn;
+
+    &:focus {
+        .animated;
+        .pulse;
+    }
+}
+
+// Keys
+.keys {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-flow: wrap;
+    margin: 0 40px 40px 40px;
+}
+
+// Standard / Value
+.keys-std {
+    .keys;
+
+    .btn-num {
+        flex: 47%;
+        .number-button;
+
+        &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8) {
+            margin-right: 0;
+        }
+
+        &:nth-child(7), &:nth-child(8) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// 0-9
+.keys-0-9 {
+	.keys;
+
+	.btn-num {
+		flex: 31%;
+		.number-button;
+
+		&:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(10) {
+			margin-right: 0;
+		}
+
+		&:nth-child(10) {
+			margin-bottom: 0;
+		}
+	}
+
+	.other1 {
+		margin-right: 10px !important;
+		margin-bottom: 0;
+	}
+
+	.other2 {
+		margin: 0;
+	}
+}
+
+
+// A-Z
+.keys-a-z {
+	.keys;
+
+	.btn-num {
+		flex: 17%;
+		.number-button;
+		height: 80px;
+
+		&:nth-child(5), &:nth-child(10), &:nth-child(15), &:nth-child(20), &:nth-child(25) {
+			margin-right: 0;
+		}
+
+		&:nth-child(26) {
+			margin-bottom: 0;
+		}
+	}
+
+	.other2 {
+		margin: 0;
+	}
+}
+
+.other, .other2 {
+    background: @secondary-bg !important;
+    color: @secondary-text;
+	font-size: @fs-rg !important;
+
+    &:focus {
+        background: @secondary-bg !important;
+        color: @secondary-text !important;
+        border: none;
+    }
+}

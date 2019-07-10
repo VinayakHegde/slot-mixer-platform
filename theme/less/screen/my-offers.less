@@ -1,0 +1,89 @@
+.my-offers {
+	flex-direction: column;
+
+	.offers {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		margin-top: 40px;
+
+		.offer-wrapper {
+			border-radius: @radius;
+			margin-bottom: 40px;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+
+			// Offer Content
+			.offer-content {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				height: 180px;
+
+				.offer-text {
+					display: flex;
+					flex-direction: column;
+					flex: 1;
+					justify-content: center;
+					text-align: right !important;
+					padding: 0 20px;
+
+					.title {
+						.gotham-md;
+						text-align: right !important;
+						color: @secondary-bg;
+					}
+
+					.text {
+						.gotham-sm;
+					}
+				}
+			}
+
+			//
+			// Backgrounds
+			//
+
+			// Offer 1
+			.offer1 {
+				background: url("../../media/offer-bg.jpg") no-repeat !important;
+				.pulse;
+			}
+
+			// Offer 2
+			.offer2 {
+				background: url("../../media/offer-bg.jpg") no-repeat !important;
+			}
+
+			// Expiry
+			.expiry {
+				margin-top: 20px;
+
+				.text {
+					color: @white;
+					.gotham-rg;
+					text-transform: inherit !important;
+					letter-spacing: inherit !important;
+
+					.amount {
+						color: @secondary-bg;
+						font-weight: @fw-medium;
+						.gotham-sm;
+					}
+				}
+			}
+
+			// Active
+			.active {
+				background: @green;
+			}
+
+			// Expired
+			.expired {
+				background: @red;
+			}
+		}
+	}
+}
