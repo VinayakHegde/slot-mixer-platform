@@ -1,0 +1,63 @@
+﻿radial-gauge {
+    display: inline-block;
+    margin: 0 auto;
+
+    .meter {
+        width: 460px;
+    }
+}
+
+.meter-path {
+    fill: none;
+    stroke-width: 1;
+}
+
+.meter-path-coloured {
+    stroke-linecap: round;
+    animation: progress 2s ease-out forwards;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+}
+
+.caption {
+    font-size: 30%;
+    font-weight: 600;
+    text-anchor: middle;
+}
+
+.name {
+    font-size: 12%;
+    font-weight: 600;
+}
+
+
+// Colours
+.meter-path-opac {
+    stroke: rgba(255, 255, 255, 0.1);
+}
+
+.meter.session .meter-path-coloured {
+    stroke: blue;
+}
+
+.meter.points .meter-path-coloured {
+    stroke: blue;
+}
+
+.caption {
+    fill: blue;
+}
+
+.name {
+    fill: white;
+}
+
+.circle-lightBlue {
+    .caption {
+        fill: blue;
+    }
+}

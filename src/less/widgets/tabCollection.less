@@ -1,0 +1,94 @@
+﻿tab-collection {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: stretch;
+
+    & > [ng-transclude] {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tab-collection-tab[ng-transclude],
+    tab[ng-transclude] {
+        display: block;
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        color: #ffffff;
+        background-color: #5a5a5a;
+        margin-top: -1px;
+
+
+        p {
+            padding: 10px 0;
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+}
+
+
+
+
+.tab-collection-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: stretch;
+
+    li {
+        user-select: none;
+        flex: 1;
+        flex-grow: 1;
+        display: block;
+        line-height: 22px;
+        font-weight: 200;
+        text-align: center;
+        cursor: pointer;
+        padding: 20px;
+        background-color: #080808;
+        color: #5a5a5a !important;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        font-size: 22px;
+
+        &.tab-overflow {
+            flex: 0;
+            padding: 10px 20px;
+        }
+
+        &.active {
+            color: #ffffff !important;
+            background-color: #5a5a5a;
+        }
+    }
+}
+
+.tab-overflow-nav {
+    z-index: 300;
+    padding: 0;
+    margin: 0;
+    right: 0;
+    list-style: none;
+    position: absolute;
+    background-color: rgba(255,255,255,0.9);
+    width: 200px;
+    //padding: 10px;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+
+    li {
+        display: block;
+        padding: 10px 20px;
+        font-weight: bold;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        &:hover {
+            cursor: pointer;
+            background-color: #eee;
+        }
+    }
+}

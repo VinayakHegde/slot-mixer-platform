@@ -1,0 +1,44 @@
+{
+  "name": "slot-mixer-platform",
+  "version": "1.1.0",
+  "description": "A workflow for AngularJS and ES6 made with Webpack",
+  "scripts": {
+    "build": "webpack --bail --progress --profile",
+    "server": "webpack-dev-server --history-api-fallback --inline --progress",
+    "start": "npm run server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinayakhegde/slot-mixer-platform.git"
+  },
+  "author": "VInayak Hegde",
+  "license": "MIT",
+  "homepage": "https://github.com/vinayakhegde/slot-mixer-platform",
+  "dependencies": {
+    "angular": "^1.7.0",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "ajv": "^6.4.0",
+    "autoprefixer": "^8.4.1",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-import-glob": "^2.0.0",
+    "babel-preset-es2015": "^6.1.18",
+    "clean-webpack-plugin": "^2.0.2",
+    "copy-webpack-plugin": "^4.5.1",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "2.0.0-beta.5",
+    "file-loader": "^1.1.11",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.9.0",
+    "less-loader": "^5.0.0",
+    "node-libs-browser": "^2.1.0",
+    "null-loader": "^0.1.1",
+    "postcss-loader": "^2.1.5",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.21.0",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}

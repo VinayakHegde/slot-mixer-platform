@@ -1,0 +1,27 @@
+﻿<div class="sidebar-controls">
+    <button id="nav-closed" class="btn-sidebar pt-show" link-to="{{$ctrl.homeLink}}"
+            tigger-show="nav-open"
+            tigger-hide="nav-closed">
+        <span class="font-icon {{$ctrl.homeIcon}}"></span>
+        <span>{{$ctrl.startCaption}}</span>
+    </button>
+
+    <div class="nav-open pt-hide" id="nav-open" ng-transclude="open">
+        <div class="nav-expand">
+            <!-- Back -->
+            <button id="pt-small-back" class="btn-icon " link-back>
+                <span class="font-icon icon-back-arrow"></span>
+            </button>
+
+            <!-- Home -->
+            <button id="pt-small-home" class="btn-icon " link-to="{{$ctrl.homeLink}}">
+                <span class="font-icon icon-home"></span>
+            </button>
+
+            <!-- Close -->
+            <button id="pt-small-close" class="btn-icon"  link-to tigger-show="nav-closed" tigger-hide="nav-open">
+                <span class="font-icon icon-x"></span>
+            </button>
+        </div>
+    </div>
+</div>

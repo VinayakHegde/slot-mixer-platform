@@ -1,0 +1,25 @@
+﻿<ul class="tab-collection-nav">
+    <li ng-repeat="tab in $ctrl.primaryTabs()" 
+        ng-class="{ 'active': tab.isActive }"
+        touch-callback="$ctrl.setActiveTab(tab)">
+        <span ng-if="tab.icon" ng-class="'fa fa-'+tab.icon"></span> 
+        {{ tab.caption }}
+    </li>
+
+    <li class="tab-overflow"
+        ng-if="$ctrl.overflowTabs().length > 0"
+        ng-class="{ 'active': $ctrl.isOverflowTabActive() }"
+        touch-callback="$ctrl.setOverflowMenu(!$ctrl.overflowMenu)">
+        <span ng-class="{'fa-chevron-up' : $ctrl.isActive, 'fa-chevron-down' : !$ctrl.isActive}" class="fa"></span>
+    </li>
+</ul>
+
+<div style="position: relative">
+    <ul class="tab-overflow-nav" ng-if="$ctrl.overflowMenu">
+        <li ng-repeat="tab in $ctrl.overflowTabs()" touch-callback="$ctrl.setActiveTab(tab)">
+            {{ tab.caption }}
+        </li>
+    </ul>
+</div>
+
+<div ng-transclude></div>

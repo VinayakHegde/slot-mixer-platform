@@ -1,0 +1,53 @@
+<div ng-if="$ctrl.cashless" class="transfer">
+    <span class="title">Transfer Funds</span>
+    <div class="funds">
+        <div id="available" class="balance-display" ng-if="!$ctrl.confirm" disabled>
+            <span class="text">{{lang.Available}}</span>
+            <span class="balance">{{customer.cashless.availableCashableBalance}}</span>
+        </div>
+        <div id="transfer" class="balance-display input-field" ng-if="!$ctrl.confirm" disabled>
+            <span class="text">{{lang.Transfer}}</span>
+            <span class="balance">{{transferValue}}</span>
+        </div>
+    </div>
+    <div class="funds">
+        <div id="transfer" class="balance-display" ng-if="$ctrl.confirm" disabled>
+            <span class="text">{{lang.Transfering}}</span>
+            <span class="balance">{{transferValue}}</span>
+        </div>
+
+        <div id="pin" class="balance-display input-field" ng-if="$ctrl.confirm" disabled>
+            <span class="text">{{lang.EnterPIN}}</span>
+            <span class="balance pin-code">{{$ctrl.maskedPin}}</span>
+            <span class="balance placeholder" ng-if="!$ctrl.maskedPin">****</span>
+        </div>
+    </div>
+</div>
+<div ng-if="$ctrl.pointsPlay" class="transfer">
+    <span class="title">Redeem Points</span>
+    <div class="funds">
+        <div id="available" class="balance-display" ng-if="!$ctrl.confirm" disabled>
+            <span class="text">{{lang.Available}}</span>
+			<span class="balance">{{customer.totalPoints}}</span>
+        </div>
+
+        <div id="transfer" class="balance-display input-field" ng-if="!$ctrl.confirm" disabled>
+            <span class="text">{{lang.Transfer}}</span>
+            <span class="balance">{{transferValue}}</span>
+        </div>
+    </div>
+    <div class="funds">
+        <div id="transfer" class="balance-display" ng-if="$ctrl.confirm" disabled>
+            <span class="text">{{lang.Transfering}}</span>
+            <span class="balance">{{transferValue}}</span>
+        </div>
+
+        <div id="pin" class="balance-display input-field" ng-if="$ctrl.confirm" disabled>
+            <span class="text">{{lang.EnterPIN}}</span>
+            <span class="balance pin-code">{{$ctrl.maskedPin}}</span>
+            <span class="balance placeholder" ng-if="!$ctrl.maskedPin">****</span>
+        </div>
+    </div>
+</div>
+<key-pad ng-if="!$ctrl.confirm"></key-pad>
+<key-pad ng-if="$ctrl.confirm" confirm pin-pad></key-pad>

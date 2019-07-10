@@ -1,0 +1,109 @@
+﻿service-window {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    theme {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+
+    .pt-show {
+        display: block !important;
+    }
+
+    .pt-hide {
+        display: none !important;
+    }
+
+    .screen-not-implemented,
+    load-indicator {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: #ffffff;
+        flex: 1;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .screen-not-implemented.start-up {
+        justify-content: flex-end;
+        padding-bottom: 10px;
+    }
+
+    .screen-not-implemented.app-error {
+        word-break:break-word;
+    }
+
+    .load-indicator {
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    load-indicator.loading .load-indicator:before {
+        display: block;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 6px;
+        background-color: #2980b9;
+        animation: settingsLoading 2s linear infinite;
+    }
+}
+@-webkit-keyframes settingsLoading{
+    from {
+        left: -200px;
+        width: 30%;
+    }
+
+    50% {
+        width: 30%;
+    }
+
+    70% {
+        width: 70%;
+    }
+
+    80% {
+        left: 50%;
+    }
+
+    95% {
+        left: 120%;
+    }
+
+    to {
+        left: 100%;
+    }
+} 
+@keyframes settingsLoading {
+    from {
+        left: -200px;
+        width: 30%;
+    }
+
+    50% {
+        width: 30%;
+    }
+
+    70% {
+        width: 70%;
+    }
+
+    80% {
+        left: 50%;
+    }
+
+    95% {
+        left: 120%;
+    }
+
+    to {
+        left: 100%;
+    }
+}

@@ -1,0 +1,38 @@
+keypad-controls {
+    display: flex;
+    flex-direction: row;
+    margin: 0 40px;
+
+    // Clear
+    .btn-icon {
+        flex: 1;
+        height: 80px;
+
+        &:nth-child(1) {
+            margin-right: 10px;
+        }
+    }
+}
+
+.keys-std {
+
+    .btn-num {
+        &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8) {
+            margin-right: 0;
+        }
+    }
+}
+
+.keys-0-9 {
+
+    .btn-num {
+        &:nth-child(3), &:nth-child(6), &:nth-child(9) {
+            margin-right: 0;
+        }
+
+        &:nth-child(10) {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}

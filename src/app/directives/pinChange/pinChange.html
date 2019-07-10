@@ -1,0 +1,40 @@
+﻿<!-- Current -->
+<div ng-if="!$ctrl.showPinNew && !$ctrl.showPinVerify">
+    <p class="title">{{lang.PleaseConfirmCurrentPinCode}}</p>
+
+    <button class="btn">
+        <p class="btn-title">{{lang.EnterPIN}}</p>
+        <p class="item-amount pin-code" ng-if="$ctrl.maskedPin">{{$ctrl.maskedPin}}</p>
+        <p class="item-amount placeholder" ng-if="!$ctrl.maskedPin">****</p>
+    </button>
+
+    <key-pad ng-if="!$ctrl.showPinNew && !$ctrl.showPinVerify" pin-pad></key-pad>
+</div>
+
+<!-- New -->
+<div ng-if="$ctrl.showPinNew && !$ctrl.showPinVerify">
+
+    <p class="title">{{lang.PleaseEnterNewPinCode}}</p>
+
+    <button class="btn">
+        <p class="btn-title">{{lang.EnterNewPIN}}</p>
+        <p class="item-amount pin-code">{{$ctrl.maskedPinNew}}</p>
+        <p class="item-amount placeholder" ng-if="!$ctrl.maskedPin">****</p>
+    </button>
+
+    <key-pad ng-if="$ctrl.showPinNew" pin-pad></key-pad>
+</div>
+
+<!-- Verify -->
+<div ng-if="$ctrl.showPinNew && $ctrl.showPinVerify">
+
+    <p class="title">{{lang.PleaseConfirmNewPinCode}}</p>
+
+    <button class="btn">
+        <p class="btn-title">{{lang.VerifyPIN}}</p>
+        <p class="item-amount pin-code">{{$ctrl.maskedPinVerify}}</p>
+        <p class="item-amount placeholder" ng-if="!$ctrl.maskedPin">****</p>
+    </button>
+
+    <key-pad ng-if="$ctrl.showPinVerify" pin-pad></key-pad>
+</div>

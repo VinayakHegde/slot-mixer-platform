@@ -1,0 +1,54 @@
+﻿/* basic default for view */
+/* serviceWindow -> view -> screen */
+/* widths and heights will be driven by global serviceWindow class e.g. large, medium, small*/
+@bottom-bar-height: 60px;
+view,
+.view {
+    display: flex;
+    /* debateable as to whether we should make view 
+   display: flex or display: block by default
+   likewise whether <screen> should be flex: 1 by default
+   let's discuss
+*/
+    &[position="left"] {
+        display: flex;
+        flex: 1;
+        position: relative;
+        flex-direction: column;
+    }
+
+    &[position="bottom"] {
+        display: flex;
+        margin-top: auto;
+        width: 100%;
+        height: @bottom-bar-height;
+        max-height: @bottom-bar-height;
+        position: relative;
+        flex-direction: row;
+
+        screen {
+            display: flex;
+            width: 100%;
+        }
+    }
+}
+
+message-view {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    /* height of the message-view depends on height of the bottom bar
+        since bottom bar is fixed height we can set the hight of the messageview with calc()
+        - suggest if any better approach than this
+    */
+    height: calc(100% - @bottom-bar-height);
+
+    .message-view {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}

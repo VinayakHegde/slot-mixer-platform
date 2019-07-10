@@ -1,0 +1,55 @@
+﻿.tp-panel-collection {
+    display: flex;
+    flex: 1 1 0;
+    -ms-flex: 1;
+    flex-direction: column;
+
+    .tp-panel {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1px;
+
+        &.active {
+            flex: 1 1 0;
+            -ms-flex: 1;
+        }
+
+        &:last-child {
+            margin-bottom: 0px;
+
+            .tp-panel-header {
+                border-bottom: none;
+            }
+        }
+
+        .tp-panel-header {
+            display: flex;
+            color: #fff !important;
+            font-weight: bold;
+            margin: 0 !important;
+            font-size: 22px;
+            cursor: pointer;
+            padding: 10px 15px;
+            background-color: #ffffff40;
+            height: 40px;
+            line-height: 40px;
+
+            span.panel-caption {
+                flex: 1;
+                text-indent: 15px;
+            }
+            
+            span.fa {
+                height: inherit;
+                line-height: inherit;
+            }
+        }
+
+        .tp-panel-body {
+            padding: 10px;
+            flex: 1;
+            overflow-y: auto;
+        }
+    }
+}

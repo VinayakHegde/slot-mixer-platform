@@ -1,0 +1,27 @@
+﻿<!-- Keypad -->
+<div class="keypad-area">
+
+    <keypad-controls>
+
+        <!-- Clear -->
+        <button class="btn-icon" ng-click="$ctrl.resetValue('')">
+            <span class="font-icon icon-x"></span>
+        </button>
+
+        <!-- Confirm -->
+        <button class="btn-icon" ng-click="$ctrl.onConfirm()">
+            <span class="font-icon icon-check"></span>
+        </button>
+    </keypad-controls>
+
+    <span class="border-line"></span>
+
+    <div ng-class="$ctrl.keypad.className">
+        <button ng-repeat="key in $ctrl.keypad.keys"
+                class="btn-num"
+                ng-class="$ctrl.getButtonClass(key)"
+                ng-click="$ctrl.resetValue(key)">
+            {{$ctrl.formattedKey(key)}}
+        </button>
+    </div>
+</div>
