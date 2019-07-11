@@ -6,6 +6,6 @@ const importAll = resource => {
   resource.keys().forEach(key => cache[key] = resource(key));
 }
 
-importAll(require.context('./swWidgets/', true, /\.js$/));
+importAll(require.context('./widgets/', true, /\.js$/));
 importAll(require.context('./app/', true, /\.js$/));
 importAll(require.context('./less/', true, /\.less$/));
