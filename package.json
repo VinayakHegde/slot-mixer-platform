@@ -16,7 +16,7 @@
   "homepage": "https://github.com/vinayakhegde/slot-mixer-platform",
   "dependencies": {
     "angular": "^1.7.0",
-    "underscore": "^1.9.1"
+    "underscore": "^1.12.1"
   },
   "devDependencies": {
     "ajv": "^6.4.0",
