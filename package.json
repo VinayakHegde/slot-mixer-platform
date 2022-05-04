@@ -15,7 +15,7 @@
   "license": "MIT",
   "homepage": "https://github.com/vinayakhegde/slot-mixer-platform",
   "dependencies": {
-    "angular": "^1.7.0",
+    "angular": "^1.8.3",
     "underscore": "^1.9.1"
   },
   "devDependencies": {
